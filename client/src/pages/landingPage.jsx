@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import GoogleLogin from "../components/google login oauth/googleLogin";
 
 const LandingPage = () => {
   return (
@@ -10,9 +11,9 @@ const LandingPage = () => {
         </div>
 
         <div className="my-3 flex mx-auto mt-[20px] bg-white gap-2 rounded-3xl w-[70%] text-black cursor-pointer shadow-md py-3 px-6 justify-center">
-          Google Button
+          <GoogleLogin/>
         </div>
-
+ 
         <div className="flex mx-auto mt-[20px] py-2 px-2 bg-white gap-2 rounded-3xl items-center w-[70%] justify-center text-black hover:bg-gray-100 border-2 cursor-pointer">
           Sign With Email
         </div>

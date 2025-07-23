@@ -1,52 +1,92 @@
+import { GoogleLogin } from "@react-oauth/google";
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Singup = () => {
+const Signup = () => {
   return (
-    <div className="w-full flex flex-col items-center">
-      <div className="text-4xl mb-5">
+    <div className="w-full flex flex-col items-center min-h-screen bg-gray-50">
+      {/* Heading */}
+      <h1 className="text-3xl md:text-4xl font-bold text-gray-800 text-center mt-12 mb-8 px-4">
         Make the most of your professional life
-      </div>
-      <div className="w-[85%] md:w-[28%] shadow-xl rounded-sm  box p-10">
-        <div className="flex flex-col gap-4">
+      </h1>
+
+      {/* Signup Card */}
+      <div className="w-[90%] md:w-[28%] shadow-xl rounded-lg bg-white p-8">
+        <div className="flex flex-col gap-5">
+          {/* Email */}
           <div>
-            <label htmlFor="email">Email</label>
+            <label
+              htmlFor="email"
+              className="block mb-1 text-gray-700 font-medium"
+            >
+              Email
+            </label>
             <input
-              type="text"
-              className="w-full text-xl border-2 rounded-lg px-4 py-1"
+              type="email"
+              id="email"
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 text-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="abdulwajeed@gmail.com"
             />
           </div>
+
+          {/* Password */}
           <div>
-            <label htmlFor="password">Password</label>
+            <label
+              htmlFor="password"
+              className="block mb-1 text-gray-700 font-medium"
+            >
+              Password
+            </label>
             <input
               type="password"
-              className="w-full text-xl border-2 rounded-lg px-4 py-1"
+              id="password"
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 text-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Password"
             />
           </div>
+
+          {/* Full Name */}
           <div>
-            <label htmlFor="full-name">Full Name</label>
+            <label
+              htmlFor="full-name"
+              className="block mb-1 text-gray-700 font-medium"
+            >
+              Full Name
+            </label>
             <input
               type="text"
-              className="w-full text-xl border-2 rounded-lg px-4 py-1"
-              placeholder="abdul wajeed"
+              id="full-name"
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 text-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Abdul Wajeed"
             />
           </div>
-          <div className=" bg-blue-700 text-white w-full text-xl rounded-lg cursor-pointer my-2 px-4 py-2 text-center hover:bg-blue-900 ">
+
+          {/* Register Button */}
+          <button className="bg-blue-700 hover:bg-blue-900 text-white font-semibold text-lg rounded-lg w-full py-3 transition">
             Register
-          </div>
+          </button>
         </div>
-        <div className="flex items-center gap-2 ">
-          <div className="border-b-1 border-gray-400 w-[45%]" /> <div> or </div>{" "}
-          <div className="border-b-1 border-gray-400 w-[45%] my-6" />
+
+        {/* Divider */}
+        <div className="flex items-center my-6">
+          <div className="flex-grow border-t border-gray-300"></div>
+          <span className="px-3 text-gray-500 text-sm">OR</span>
+          <div className="flex-grow border-t border-gray-300"></div>
         </div>
-        <div>Google Oauth</div>
+
+        {/* Google Login */}
+        <div className="w-full flex justify-center">
+          <GoogleLogin />
+        </div>
       </div>
-      <div className="mt-4 mb-10">
-        {" "}
+
+      {/* Footer */}
+      <div className="text-center mt-6 text-gray-600 text-lg mb-10">
         Already on LinkedIn?{" "}
-        <Link to={"/login"} className="text-blue-700 cursor-pointer hover:font-semibold">
+        <Link
+          to="/login"
+          className="text-blue-700 hover:font-semibold transition"
+        >
           Sign in
         </Link>
       </div>
@@ -54,4 +94,4 @@ const Singup = () => {
   );
 };
 
-export default Singup;
+export default Signup;
