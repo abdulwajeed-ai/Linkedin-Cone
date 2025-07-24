@@ -10,7 +10,7 @@ const LandingPage = () => {
           Welcome To Your Professional Community
         </div>
 
-        <div className="my-3 flex mx-auto mt-[20px] bg-white gap-2 rounded-3xl w-[70%] text-black cursor-pointer shadow-md py-3 px-6 justify-center">
+        <div className="my-3 flex mx-auto  mt-[20px] bg-white gap-2 rounded-3xl w-[70%]  cursor-pointer shadow-md py-1 justify-center ">
           <GoogleLogin/>
         </div>
  
