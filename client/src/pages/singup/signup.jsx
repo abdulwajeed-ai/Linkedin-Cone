@@ -75,8 +75,8 @@ const Signup = () => {
         </div>
 
         {/* Google Login */}
-        <div className="w-full flex justify-center">
-          <GoogleLogin />
+        <div className="w-full">
+          <div><GoogleLogin /></div>
         </div>
       </div>
 
